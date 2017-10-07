@@ -6,11 +6,6 @@
 
 <script>
 export default {
-    methods: {
-        check: function check() {
-            return "ok";
-        }
-    },
     data: function() {
         return {
             greeting: 'Привет всем!'
