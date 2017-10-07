@@ -6,6 +6,7 @@
 
 <script>
 export default {
+    name: "hello",
     data: function() {
         return {
             greeting: 'Привет всем!'
