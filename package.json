@@ -1,0 +1,32 @@
+{
+  "name": "vue-test",
+  "version": "1.0.0",
+  "description": "Just a test",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
+    "build": "cross-env NODE_ENV=production webpack --display-error-details --progress --hide-modules"
+  },
+  "devDependencies": {
+    "webpack": "^3.6.0",
+    "vue": "^2.4.4",
+    "vue-loader": "^13.0.5",
+    "vue-template-compiler": "*",
+    "babel-core": "*",
+    "babel-loader": "*",
+    "babel-plugin-transform-runtime": "*",
+    "babel-preset-env": "*",
+    "cross-env": "*",
+    "css-loader": "*",
+    "vue-html-loader": "*",
+    "vue-style-loader": "*",
+    "webpack-dev-server": "*"
+  },
+  "author": "Demian",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Demian87/vue-test.git"
+  }
+}
