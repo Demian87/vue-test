@@ -1,9 +1,9 @@
 import Vue from 'vue';
-var hello = require('vue-loader!../components/hello.vue').default;
+import Hello from '../components/hello.vue';
 
 new Vue({
     el: '#app',
     components: {
-        hello : hello
+        hello : Hello
     }
 })
