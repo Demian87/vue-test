@@ -9,18 +9,22 @@
     "build": "cross-env NODE_ENV=production webpack --display-error-details --progress --hide-modules"
   },
   "devDependencies": {
-    "webpack": "^3.6.0",
-    "vue": "^2.4.4",
-    "vue-loader": "^13.0.5",
-    "vue-template-compiler": "*",
     "babel-core": "*",
     "babel-loader": "*",
     "babel-plugin-transform-runtime": "*",
     "babel-preset-env": "*",
     "cross-env": "*",
     "css-loader": "*",
+    "nib": "*",
+    "pug": "^2.0.0-rc.4",
+    "stylus-loader": "*",
+    "vue": "^2.4.4",
     "vue-html-loader": "*",
+    "vue-loader": "^13.0.5",
     "vue-style-loader": "*",
+    "vue-template-compiler": "*",
+    "vue-router": "*",
+    "webpack": "^3.6.0",
     "webpack-dev-server": "*"
   },
   "author": "Demian",
@@ -28,5 +32,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/Demian87/vue-test.git"
+  },
+  "dependencies": {
+    "stylus": "^0.54.5"
   }
 }

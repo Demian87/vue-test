@@ -19,6 +19,20 @@ module.exports = {
         test: /\.js$/,
         loader: 'babel-loader',
         exclude: /node_modules/
+      },
+      {
+        test: /\.styl$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          {
+            loader: 'stylus-loader',
+            options: {
+              use: [require('nib')()],
+              import: ['nib/lib/nib/index.styl']
+            },
+          },
+        ],
       }
     ]
   },
