@@ -22,7 +22,7 @@
         label Email
           span *
         input(type='text', placeholder='Ваш Email', v-model='user.email')
-      a.rm_button--next(href='#') Зарегистрироваться
+      a.rm_button--next(href='#/register' v-on:click='registerUser(user)') Зарегистрироваться
       .rm_modal--footer
         .rm_float--right
           | Already have an account? 
@@ -36,6 +36,31 @@ export default {
         return {
         user: {}
         }
+    },
+    methods: {
+      registerUser : function(userToReg) {
+        if (userToReg) {
+          // POST register
+          //{"request":"register","registerdata":{"login":"Demian3","password":"kukareku","name":"Demian","mail":"volkov.a@volantsoft.ru"}}
+          var req = {
+            request: "register",
+            registerdata: {
+              login: userToReg.login,
+              password: userToReg.password,
+              name: userToReg.name,
+              mail: userToReg.mail
+            }
+          };
+          this.$http.post('http://moneycalendar.volantsoft.ru/request.php', JSON.stringify(req)).then(response => {
+            // get body data
+            alert(response.body);
+            this.someData = JSON.parse(response.body);
+
+          }, response => {
+            // error callback
+          });
+        }
+      }
     }
 }
 </script>
